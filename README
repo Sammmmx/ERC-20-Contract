@@ -1,0 +1,46 @@
+# ERC-20 Token Contract
+
+## Overview
+A custom ERC-20 token built from scratch in Solidity without OpenZeppelin. Implements the full ERC-20 standard including transfer, approval and allowance mechanisms with gas optimization and custom errors.
+
+## Contract
+- ERC-20.sol — Core token contract
+
+## Features
+- Custom token name: JobToken (JBT)
+- Transfer tokens between addresses
+- Approve and transferFrom for delegated transfers
+- Register members with token allocation
+- Gas optimized with custom errors instead of require strings
+- Events on every state change
+
+## Tech Stack
+- Solidity ^0.8.26
+- Hardhat
+- Ethers.js
+- Chai
+
+### Installation
+npm install
+
+### Run Tests
+npx hardhat test
+
+### Deploy
+npx hardhat ignition deploy ignition/modules/ERC-20.js --network sepolia
+
+## Deployed Contract
+- Network: Sepolia Testnet
+- Address: 0x212281278FC7f8f99F689Ae80d0269a7A01da08D
+- Verified on: Etherscan - https://sepolia.etherscan.io/address/0x212281278FC7f8f99F689Ae80d0269a7A01da08D
+
+## Test Coverage
+17 tests passing covering:
+- Register function access control
+- Transfer validations and edge cases
+- TransferFrom with allowance checks
+- Approve function
+- Event emission for all functions
+
+## License
+MIT
